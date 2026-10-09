@@ -1,0 +1,51 @@
+IngeTrazo Unfold Classic — v0.5.7
+Overview
+
+IngeTrazo Unfold Classic is an extension inspired by the SketchUp Unfold plugin. It unfolds selected faces of a mesh around a shared hinge edge, allowing connected geometry to be laid out into an unfolded configuration.
+
+This iteration retains the classic hinge-based unfolding behaviour and is now working successfully in IngeTrazo.
+
+Current Features
+Hinge-based unfolding: Uses the actual shared edge between faces as the hinge for unfolding.
+Face selection: Unfolds selected faces, including multiple coplanar faces where supported by the current selection workflow.
+Geometry update: Rebuilds the affected faces in their unfolded positions.
+Orphan-edge cleanup: Removes edges left behind by the unfolding operation when they are no longer connected to any faces.
+Undo/redo support: Uses IngeTrazo's command history and mesh-state restoration mechanism.
+SketchUp-inspired workflow: Reproduces the core unfolding behaviour of the SketchUp plugin.
+Current Behaviour
+
+The extension operates on the selected mesh faces and uses a shared hinge edge to determine the unfolding operation. The affected geometry is updated to reflect the unfolded arrangement.
+
+The latest iteration includes cleanup of orphan edges that may otherwise remain after the original faces are removed and the unfolded faces are rebuilt.
+
+Known Limitation
+
+Selection of multiple faces
+
+The current face-selection workflow differs slightly from the SketchUp Unfold plugin. Selecting multiple faces for unfolding is not yet identical to the SketchUp workflow.
+
+This is a minor limitation and does not prevent the extension from performing its current unfolding operation successfully.
+
+Development Status
+
+Status: Working iteration
+
+This version is considered a working baseline. The primary unfolding operation and orphan-edge cleanup are functioning as intended in the current setup.
+
+Future development should preserve the existing hinge logic, geometry handling, and undo/redo behaviour while investigating whether multiple-face selection can be made more consistent with the SketchUp plugin.
+
+Compatibility
+Application: IngeTrazo
+Extension version: v0.5.7
+Reference workflow: SketchUp Unfold plugin
+Notes for Future Development
+
+When modifying this extension:
+
+Preserve the existing hinge-based unfolding behaviour.
+Retain orphan-edge cleanup after unfolding.
+Preserve command-history and undo/redo support.
+Avoid regressions in the currently working face-unfolding workflow.
+Treat multiple-face selection as the main outstanding difference from the SketchUp plugin.
+
+This README describes the current working iteration. It does not claim complete feature parity with the SketchUp plugin.
