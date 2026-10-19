@@ -1,0 +1,24 @@
+# IngeTrazo Unfold — Version 10 (v10)
+
+**Development Update | Testing Release**
+
+This extension is being developed iteratively to provide a reliable face-selection and unfolding workflow in IngeTrazo.
+
+Version 10 consolidates earlier fixes for hidden-edge handling, reference-face validation, selection feedback, and mouse interaction. A cleaned-up, more readable source file and project notes have also been prepared to support future development.
+
+## How to Use
+
+1. **Activate the tool:** Go to **Extensions → Unfold → Unfold**.
+2. **Select a face:** Single-click a face to select only that face.
+3. **Select a coplanar group:** Double-click a face to select its connected, coplanar faces. Hidden edges should act as barriers to this selection.
+4. **Choose the reference face:** Click a valid face adjacent to the selected geometry. It must share a hinge edge with at least one selected face.
+5. **Unfold:** The selected geometry unfolds around the shared hinge edge of the reference face. A non-adjacent reference face should not trigger an unfold.
+6. **Cancel:** Press **Esc** or **Space** to cancel the operation.
+
+## Status and Testing
+
+**Status:** Syntax-checked; real-world testing inside IngeTrazo is still required. The expected behaviour described above has not yet been fully verified in practical use.
+
+**Testing welcome!** Please try the extension and report bugs, unexpected behaviour, or suggestions. Include the steps to reproduce any issue, what you expected to happen, and what actually happened.
+
+This is an ongoing learning project, using ChatGPT to assist with coding, debugging, documentation, and version management.
